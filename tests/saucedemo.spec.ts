@@ -6,9 +6,9 @@ test.beforeEach(async ({page}) =>{
 
 })
 
-test.afterEach(async ({}) =>{
+/*test.afterEach(async ({}) =>{
     console.log ('teste finalizado');
-}) 
+}) */
 
 test.only('Localizando por data-test', async ({page})=>{
 
@@ -19,6 +19,7 @@ await page.getByTestId('login-button').click();
 
 await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html'); //verificar se está na url desejada
 const productLable = page.locator('data-test="title')
+console.log("url verificada com sucesso");
 
 await page.pause();
 
